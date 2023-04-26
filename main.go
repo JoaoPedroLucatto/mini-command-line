@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"linha-de-comando/app"
+	"linha-de-comando/code"
 	"log"
 	"os"
 )
@@ -10,7 +10,7 @@ import (
 func main() {
 	fmt.Println("Ips publicos do servidores !")
 
-	application := app.Generate()
+	application := code.Generate()
 	err := application.Run(os.Args)
 	if err != nil {
 		log.Fatal(err)

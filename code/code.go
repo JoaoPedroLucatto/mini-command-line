@@ -1,4 +1,4 @@
-package app
+package code
 
 import (
 	"fmt"
@@ -12,9 +12,9 @@ import (
 // exemplo: go run main.go ip --host amazon.com.br
 // exemplo2: go run main.go server --host amazon.com.br
 func Generate() *cli.App {
-	app := cli.NewApp()
-	app.Name = "Aplicação de Linha de comando"
-	app.Usage = "Buscar Ips e nomes  de servidores  na internet"
+	code := cli.NewApp()
+	code.Name = "Aplicação de Linha de comando"
+	code.Usage = "Buscar Ips e nomes  de servidores  na internet"
 
 	flags := []cli.Flag{
 		cli.StringFlag{
@@ -23,7 +23,7 @@ func Generate() *cli.App {
 		},
 	}
 
-	app.Commands = []cli.Command{
+	code.Commands = []cli.Command{
 		{
 			Name:   "ip",
 			Usage:  "Buscando Ips de endereço de Internet",
@@ -37,7 +37,7 @@ func Generate() *cli.App {
 			Action: findNs,
 		},
 	}
-	return app
+	return code
 }
 
 func findIps(c *cli.Context) {
