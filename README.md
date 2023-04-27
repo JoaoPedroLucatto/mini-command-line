@@ -6,7 +6,7 @@ Mini application command line
 
 * Have docker installed **[docker:Docker](https://www.docker.com/)**
 
-## ☕ Running <nome_do_projeto>
+## ☕ Running
 
 * Clone the project.
 * Run the following command to build the image.
